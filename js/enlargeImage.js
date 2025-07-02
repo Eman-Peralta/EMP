@@ -8,7 +8,7 @@ document.querySelectorAll(".designs-projects-container img").forEach((img) => {
     const pdfUrl = img.getAttribute("data-pdf");
     if (pdfUrl) {
       modal.style.display = "block";
-      viewer.src = pdfUrl + "#toolbar=0&navpanes=0&scrollbar=0";
+      viewer.src = pdfUrl + "#toolbar=0&navpanes=0&scrollbar=0&zoom=55";
       caption.innerHTML = img.alt + "<br><br><small>Tip: You can zoom in/out (ctrl + scroll for desktop)</small>";
     }
   });
@@ -26,5 +26,20 @@ modal.onclick = (e) => {
   }
 };
 
-// prevent right-click context menu - to avoid downloading the PDF
-document.addEventListener("contextmenu", (event) => event.preventDefault());
+// for web design
+  // Open modal when "View Design" is clicked
+  document.querySelectorAll(".web-card .button1").forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const pdf = this.closest(".web-card").querySelector("img").dataset.pdf;
+      const imgAlt = this.closest(".web-card").querySelector("img").alt;
+      if (pdf) {
+        modal.style.display = "block";
+        viewer.src = pdf + "#toolbar=0&navpanes=0&scrollbar=0&zoom=40";
+      caption.innerHTML = imgAlt + "<br><br><small>Tip: You can zoom in/out (ctrl + scroll for desktop)</small>";
+      }
+    });
+  });
+
+
+

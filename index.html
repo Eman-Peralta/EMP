@@ -31,8 +31,6 @@
       </nav>
     </header>
 
-    
-
     <!-- main content -->
     <main>
       <button id="scrollToTopBtn" title="Go to top">↑</button>
@@ -46,6 +44,7 @@
               class="typewrite"
               data-period="1500"
               data-type='[ "Web Developer", "UI/UX Designer", "Graphic Designer", "Video Editor" ]'
+              draggable="false"
             >
               <span class="wrap"></span>
             </a>
@@ -77,19 +76,24 @@
               Contact Him</a
             >
 
-            <a href="#" class="resume-btn"
-              ><img
-                src="images/icons/download.svg"
-                alt="Download Eman Peralta Resume"
-                id="icons"
-              />Download Resume</a
+            <a
+              href="images/Resume -  Emmanuel Peralta.pdf"
+              class="resume-btn"
+              download
             >
+              <img
+                src="images/icons/download.svg"
+                alt="Download Icon"
+                id="icons"
+              />
+              Download Resume
+            </a>
           </div>
         </article>
 
         <article class="hero2">
           <div class="hero-img-container">
-            <img src="images/resume pic.jpg" alt="" id="hero-img" />
+            <img src="images/resume pic.webp" alt="" id="hero-img" />
           </div>
         </article>
       </section>
@@ -137,7 +141,53 @@
         </div>
 
         <br />
-        <button class="button1">View School/Contest Certificates</button>
+        <button class="button1" id="certBtn" popovertarget="certificates">
+          View School/Contest Certificates
+        </button>
+
+        <div id="certificates" popover>
+          <div class="background-blur">
+            <div class="certificates-container">
+              <h2>Certificates</h2>
+              <button id="closeCertBtn" popovertarget="certificates">X</button>
+              <p>
+                Here are some of the certificates I have earned during my
+                academic journey and participation in various contests.
+              </p>
+
+              <div>
+                <h3>College</h3>
+                <img
+                  src="images/certificates/ITGENO Certificate of Completion.png"
+                  alt="ITGENO Certificate of Completion"
+                />
+                <img
+                  src="images/certificates/ITGENO Certificate of Appreciation.png"
+                  alt="ITGENO Certificate of Appreciation"
+                />
+                <img
+                  src="images/certificates/ITGENO Certificate of Participation.png"
+                  alt="ITGENO Certificate of Participation"
+                />
+                <img
+                  src="images/certificates/Programming Wizard 2024.png"
+                  alt="Programming Wizard 2024"
+                />
+                <img
+                  src="images/certificates/Dean's Lister 2021-2025.png"
+                  alt="Dean's Lister 2021-2025"
+                />
+                <br />
+                <br />
+                <h3>Secondary Education (SHS)</h3>
+                <img
+                  src="images/certificates/Dean's Lister 2021-2025.png"
+                  alt="Dean's Lister 2021-2025"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- WORK EXPERIENCE -->
@@ -188,9 +238,6 @@
             </ul>
           </article>
         </div>
-
-        <br />
-        <button class="button1">View Pictures at Work</button>
       </section>
 
       <!-- SKILLS -->
@@ -434,7 +481,7 @@
         <div class="designs-projects-container">
           <div class="design-card">
             <img
-              src="images/projects/designs/design1.png"
+              src="images/projects/designs/design1.webp"
               alt="Burger Promotional Poster"
               data-pdf="images/projects/designs/Burger Promotion.pdf"
               oncontextmenu="return false;"
@@ -444,7 +491,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/design2.png"
+              src="images/projects/designs/design2.webp"
               alt="realme Phone Ad - target audience is graduate students "
               data-pdf="images/projects/designs/Graduation Gift Ad.pdf"
               oncontextmenu="return false;"
@@ -454,7 +501,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/design3.png"
+              src="images/projects/designs/design3.webp"
               alt="realme Selling Ad"
               data-pdf="images/projects/designs/realme Phone Poster.pdf"
               oncontextmenu="return false;"
@@ -464,7 +511,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/brochure1.png"
+              src="images/projects/designs/brochure1.webp"
               alt="ITGENO Brochure - white version"
               data-pdf="images/projects/designs/ITGENO Brochure ver1.pdf"
               oncontextmenu="return false;"
@@ -474,7 +521,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/brochure2.png"
+              src="images/projects/designs/brochure2.webp"
               alt="ITGENO Brochure - black version"
               data-pdf="images/projects/designs/ITGENO Brochure ver2.pdf"
               oncontextmenu="return false;"
@@ -484,7 +531,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/USCP Promotional Poster.png"
+              src="images/projects/designs/USCP Promotional Poster.webp"
               alt="USCP Promotional Poster"
               data-pdf="images/projects/designs/USCP Promotional Poster.pdf"
               oncontextmenu="return false;"
@@ -494,7 +541,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/poster1.png"
+              src="images/projects/designs/poster1.webp"
               alt="Motivational Poster for Social Media Page"
               data-pdf="images/projects/designs/Motivational Posters.pdf"
               oncontextmenu="return false;"
@@ -504,7 +551,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/design4.png"
+              src="images/projects/designs/design4.webp"
               alt="Valentine's day Greeting Poster"
               data-pdf="images/projects/designs/Happy Valentine Banner.pdf"
               oncontextmenu="return false;"
@@ -514,7 +561,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/designs/banner1.png"
+              src="images/projects/designs/banner1.webp"
               alt="Wealth Emporium Banner and Product Posters"
               data-pdf="images/projects/designs/Wealth Emporium Graphic Designs.pdf"
               oncontextmenu="return false;"
@@ -524,7 +571,7 @@
           </div>
           <div class="design-card">
             <img
-              src="images/projects/websites/itgeno.png"
+              src="images/projects/websites/itgeno.webp"
               alt="ITGENO Website Design"
               data-pdf="images/projects/designs/Website Design of ITGENO.pdf"
               oncontextmenu="return false;"
@@ -534,24 +581,19 @@
           </div>
         </div>
 
-        <!-- Modal -->
-        <div id="pdfModal" class="modal">
-          <span class="close">&times;</span>
-          <iframe
-            id="pdfViewer"
-            class="modal-content"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+        
 
-          <div id="caption"></div>
-        </div>
-
-        <h3>Websites Designed/Developed</h3>
+        <h3 id="webDesDev">Websites Designed/Developed</h3>
         <div class="prj-cards-container">
           <article class="prj-cards 1">
-            <img src="images/projects/websites/itgeno.png" alt="" />
+            <img src="images/projects/websites/itgeno.webp" alt="" />
             <div class="card__content">
+              <h3 class="card__title">ITGENO - Technologies Inc.</h3>
+              <p class="card__description">
+                A website for an IT company that provides information about their
+                services, products, and contact details. It features a clean design
+                with easy navigation and responsive layout.
+              </p>
               <a
                 href="https://itgeno-technologies.com/"
                 target="_blank"
@@ -562,34 +604,49 @@
           </article>
 
           <article class="prj-cards 2">
-            <img src="images/projects/websites/wealthemporium.png" alt="" />
+            <img src="images/projects/websites/wealthemporium.webp" alt="" />
             <div class="card__content">
-              <a
-                href="https://wealthemporiumph.com/"
+              <h3 class="card__title">Wealth Emporium Ventures Inc.</h3>
+              <p class="card__description">
+                A website for supplement selling company that provides
+                information about their products, benefits, and contact details. It
+                features a clean design with easy navigation and responsive
+                layout.
+              </p>
+                <a href="https://wealthemporiumph.com/"
                 target="_blank"
                 class="button1"
-                >Go to Website</a
-              >
+                >Go to Website</a>
+              
             </div>
           </article>
 
           <article class="prj-cards 3">
-            <img src="images/projects/websites/legacy.png" alt="" />
+            <img src="images/projects/websites/legacy.webp" alt="" />
             <div class="card__content">
-              <!-- <h3 class="card__title">Inventory Management System</h3>
+              <h3 class="card__title">Legacy HSI</h3>
               <p class="card__description">
-                A custom inventory management system with real-time charts using
-                Google Charts and dynamic SQL queries.
-              </p> -->
-              <a href="" target="_blank" class="button1">Go to Website</a>
+                A website for supplement selling company that provides
+                information about their products, benefits, and contact details. It
+                features a clean design with easy navigation and responsive
+                layout.
+              </p>
+              <a href="https://legacyhsi.com/2025/index.php" target="_blank" class="button1">Go to Website</a>
             </div>
           </article>
 
           <article class="prj-cards 4">
-            <img src="images/projects/websites/dffh.png" alt="" />
+            <img src="images/projects/websites/dffh.webp" alt="" />
             <div class="card__content">
+              <h3 class="card__title">DFFH Frachising</h3>
+              <p class="card__description">
+                A website for a franchising company that provides information
+                about their franchise offerings, application process, and
+                contact details. It features a clean design with easy navigation
+                and responsive layout.
+              </p>
               <a
-                href="https://legacyhsi.com/2025/index.php"
+                href="https://dffhfranchise.com/index.php"
                 target="_blank"
                 class="button1"
                 >Go to Website</a
@@ -597,14 +654,75 @@
             </div>
           </article>
 
-          <article class="prj-cards 5">
-            <img src="images/projects/websites/1Agila.png" alt="" />
+          <article class="prj-cards web-card">
+            <img
+              src="images/projects/websites/HomeHaven.webp"
+              alt="College Capstone Project: HomeHaven - A real-estate management system"
+              data-pdf="images/projects/websites/HomeHaven.pdf"
+              oncontextmenu="return false;"
+              draggable="false"
+            />
             <div class="card__content">
-              <a href="" target="_blank" class="button1">View Design</a>
+              <h3 class="card__title">College Capstone Project: HomeHaven</h3>
+              <p class="card__description">
+                A real-estate management system that allows users to
+                search, filter, message, and schedule an appointment. It features a user-friendly interface, and a comprehensive admin dashboard for property management.
+              </p>
+              <a href="#webDesDev" class="button1" class="webDesign">View Design</a>
             </div>
           </article>
+
+          <article class="prj-cards web-card">
+            <img
+              src="images/projects/websites/senAllen.webp"
+              alt="A prototype landing page for Senator Allen Capuyan"
+              data-pdf="images/projects/websites/senAllen.pdf"
+              oncontextmenu="return false;"
+              draggable="false"
+            />
+            <div class="card__content">
+              <h3 class="card__title">Sen. Allen Capuyan Prototype Website</h3>
+              <p class="card__description">
+                A landing page prototype for a political partylist, showcasing the party's mission, vision, and candidates. It features a clean design with easy navigation and responsive layout.
+              </p>
+              <a href="#webDesDev" class="button1" class="webDesign">View Design</a>
+            </div>
+          </article>
+          
+
+          <article class="prj-cards web-card">
+            <img
+              src="images/projects/websites/1Agila.webp"
+              alt="A prototype landing page for 1Agila Partylist"
+              data-pdf="images/projects/websites/1Agila.pdf"
+              oncontextmenu="return false;"
+              draggable="false"
+            />
+            <div class="card__content">
+              <h3 class="card__title">1Agila Partylist Prototype Website</h3>
+              <p class="card__description">
+                A prototype landing page for a political partylist, showcasing the party's mission, vision, and candidates. It features a clean design with easy navigation and responsive layout.
+              </p>
+              <a href="#webDesDev" class="button1" class="webDesign">View Design</a>
+            </div>
+          </article>
+
         </div>
       </section>
+
+      <!-- PDF Modal -->
+        <div id="pdfModal" class="modal">
+          <span class="close">&times;</span>
+          <iframe
+            id="pdfViewer"
+            class="modal-content"
+            style="zoom: 0.6"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <div id="caption"></div>
+        </div>
 
       <!-- CONTACT ME -->
       <section id="contact">
@@ -680,9 +798,11 @@
 
     <!-- scripts -->
 
+    <script src="js/script.js"></script>
     <script src="js/typewriter.js"></script>
     <script src="js/enlargeImage.js"></script>
     <script src="js/scrollToTop.js"></script>
+    <script src="js/closeModalOnOutside.js"></script>
 
     <!-- //scripts -->
   </body>

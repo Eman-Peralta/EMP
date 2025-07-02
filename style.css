@@ -10,6 +10,7 @@ body {
   background-color: #fffbf5;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -33,15 +34,40 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   margin: 0 15px;
-  font-size: 17px;
-  transition: color 0.2s ease-in;
+  padding: 5px 8px;
   font-size: 18px;
+  position: relative;
+  overflow: hidden;
 }
+
+header nav ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background-color: #f03c2e;
+  border-radius: 2px;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+header nav ul li a {
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s ease-in;
+  color: inherit;
+  text-decoration: none;
+}
+
+header nav ul li:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
 header nav ul li:hover a {
-  color: #f03c2e;
-}
-.wrap {
-  color: #f03c2e;
+  color: #fff;
 }
 
 /* Scroll to Top */
@@ -73,7 +99,6 @@ header nav ul li:hover a {
 #scrollToTopBtn:hover {
   background-color: #d6301c;
 }
-
 
 /* hero */
 #hero {
@@ -217,10 +242,6 @@ header nav ul li:hover a {
 #projects h1,
 #contact h1 {
   font-size: 28px;
-  /* color: #f03c2e;
-  font-weight: 900;
-  -webkit-text-stroke: 1px #fff;
-  text-shadow: #000 0.1em 0.1em 0.2em 1em; */
 }
 .aboutme p {
   margin-top: 20px;
@@ -268,6 +289,52 @@ ul.custom-list li::before {
   border-radius: 50%;
 }
 
+/* EDUCATION - Certificated Modal */
+
+#certificates {
+  position: fixed; /* or absolute depending on behavior */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.15); /* see-through white */
+  backdrop-filter: blur(1px); /* optional blur for the content inside */
+  z-index: 999; /* ensures it's above rest of the page */
+}
+
+.certificates-container {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+}
+.certificates-container h2,
+.certificates-container p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+#closeCertBtn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  width: 25px;
+  height: 25px;
+  color: #f03c2e;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+#closeCertBtn:hover{
+  color: #d6301c;
+}
+
+
 /* SKILLS */
 .cards-container {
   display: grid;
@@ -286,7 +353,6 @@ ul.custom-list li::before {
   box-shadow: #f03b2e76 0px 3px 8px;
 }
 
-
 .card-images {
   margin-top: 10px;
   display: grid;
@@ -299,10 +365,9 @@ ul.custom-list li::before {
   transition: transform 0.3s ease;
 }
 
-.cards:hover  .card-images div{
+.cards:hover .card-images div {
   transform: scale(1.03);
 }
-
 
 #skills-img {
   width: 40px;
@@ -388,6 +453,8 @@ small {
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
+  scrollbar-color: #f03c2e #f0f0f0;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -460,13 +527,31 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  overflow-y: auto ;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  text-align: center;
+}
+.card__content::-webkit-scrollbar {
+  display: none;
+}
+.card__content h3 {
+  color: #f03c2e;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card__content p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .prj-cards:hover .card__content {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
-
 
 /* CONTACT */
 #contact {
@@ -530,8 +615,6 @@ small {
   display: inline-block;
   vertical-align: middle;
 }
-
-/* PROJECT CARDS - Website */
 
 /* for laptop */
 @media (max-width: 1079px) {
