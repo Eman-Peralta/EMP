@@ -32,7 +32,7 @@
     </header>
 
     <!-- main content -->
-    <main aria-hidden="true" tabindex="-1" role="main">  
+    <main aria-hidden="true" tabindex="-1" role="main">
       <button id="scrollToTopBtn" title="Go to top">↑</button>
 
       <section id="hero">
@@ -40,6 +40,7 @@
           <h1 id="hero-title">
             <span class="name">I'm a </span>
             <a
+              aria-hidden="true"
               href=""
               class="typewrite"
               data-period="1500"
@@ -728,6 +729,7 @@
       <div id="pdfModal" class="modal">
         <span class="close">&times;</span>
         <iframe
+          role="main"
           id="pdfViewer"
           class="modal-content"
           style="zoom: 0.6"
