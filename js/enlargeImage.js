@@ -8,7 +8,7 @@ document.querySelectorAll(".designs-projects-container img").forEach((img) => {
     const pdfUrl = img.getAttribute("data-pdf");
     if (pdfUrl) {
       modal.style.display = "block";
-      viewer.src = pdfUrl + "#toolbar=0&navpanes=0&scrollbar=0&zoom=55";
+      viewer.src = pdfUrl + "#toolbar=0&navpanes=0&scrollbar=0&zoom=50";
       caption.innerHTML = img.alt + "<br><br><small>Tip: You can zoom in/out (ctrl + scroll for desktop)</small>";
     }
   });
