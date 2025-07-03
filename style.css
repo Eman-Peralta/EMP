@@ -10,7 +10,6 @@ body {
   background-color: #fffbf5;
 }
 
-
 header {
   display: flex;
   justify-content: space-between;
@@ -103,7 +102,7 @@ header nav ul li:hover a {
 /* hero */
 #hero {
   padding: 8% 0 3%;
-  height: 73dvh;
+  height: 73%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -290,7 +289,6 @@ ul.custom-list li::before {
 }
 
 /* EDUCATION - Certificated Modal */
-
 #certificates {
   position: fixed; /* or absolute depending on behavior */
   top: 0;
@@ -305,7 +303,6 @@ ul.custom-list li::before {
 .certificates-container {
   margin: 50px auto;
   width: 80%;
-  max-width: 600px;
   background-color: #fff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -314,11 +311,24 @@ ul.custom-list li::before {
   position: relative;
 }
 .certificates-container h2,
-.certificates-container p{
+.certificates-container p {
   text-align: center;
   margin-bottom: 20px;
 }
-#closeCertBtn{
+.certificates-container h3 {
+  margin-bottom: 20px;
+}
+.certificates-container > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+}
+.certificates-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+#closeCertBtn {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -330,11 +340,44 @@ ul.custom-list li::before {
   background-color: transparent;
   border: none;
 }
-#closeCertBtn:hover{
+#closeCertBtn:hover {
   color: #d6301c;
 }
 
-
+/* WORK modal */
+#workCert {
+  position: fixed; /* or absolute depending on behavior */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 85dvh;
+  /* background-color: ; */
+  backdrop-filter: blur(1px);
+  z-index: 999;
+  margin: 50px auto;
+  width: 80%;
+  padding: 20px;
+  border-radius: 5px;
+}
+#closeWorkCertBtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  color: #f03c2e;
+  border: none;
+  font-size: 25px;
+}
+#closeWorkCertBtn:hover {
+  color: #e30b00;
+}
+#workCert img {
+  margin-top: 10px;
+  width: 50%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 /* SKILLS */
 .cards-container {
   display: grid;
@@ -392,11 +435,6 @@ ul.custom-list li::before {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.designs-projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
 
 .design-card {
   position: relative;
@@ -443,7 +481,8 @@ small {
   color: #fff;
 }
 
-/* Modal styles */
+
+/* Modal container */
 .modal {
   display: none;
   position: fixed;
@@ -456,18 +495,10 @@ small {
   overflow: auto;
   scrollbar-color: #f03c2e #f0f0f0;
   background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 90%;
-  height: 90%;
-  background: white;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
+/* Close button */
 .close {
   position: absolute;
   top: 20px;
@@ -478,11 +509,69 @@ small {
   cursor: pointer;
 }
 
-#caption {
-  text-align: center;
-  color: white;
-  padding-top: 10px;
+/* Modal canvas */
+canvas#pdfCanvas {
+  display: block;
+  margin: 10px auto 20px;
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  /* max-height: 80vh; */
+  border-radius: 8px;
 }
+
+/* Modal caption */
+#caption,
+#caption strong {
+  color: white;
+  padding: 10px 0 20px;
+  font-size: 16px;
+}
+
+/* Pagination + Zoom Controls */
+#pdfPaginationControls {
+  margin: 10px auto;
+  text-align: center;
+}
+
+#pdfPaginationControls button {
+  background-color: #f03c2e;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin: 5px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#pdfPaginationControls button:hover {
+  background-color: #fff;
+  color: #f03c2e;
+}
+
+#pdfPaginationControls span {
+  font-size: 16px;
+  color: #fff;
+}
+#zoomLevelspan{
+  display: none;
+}
+
+#prevPage, #nextPage {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#prevPage {
+  left: 5%;
+}
+#nextPage {
+  right: 5%;
+}
+
 
 /* PROJECTS - Website */
 /* From Uiverse.io by gharsh11032000 */
@@ -528,7 +617,7 @@ small {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-y: auto ;
+  overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   text-align: center;
@@ -616,6 +705,28 @@ small {
   vertical-align: middle;
 }
 
+/* hamburger */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  display: block;
+  transition: 0.3s;
+}
+
 /* for laptop */
 @media (max-width: 1079px) {
   .cards-container {
@@ -624,3 +735,90 @@ small {
 }
 
 /* for mobile phones */
+@media (max-width: 1079px) {
+  /* *{
+    border: 1px solid red;
+  } */
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 995;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Hero Banner */
+  #hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #hero .hero1 {
+    padding-left: 5%;
+    order: 1;
+    padding: 0 5% ;
+    text-align: center;
+  }
+  #hero-title {
+  font-size: 30px;
+}
+   #hero .hero1 h1,
+    #hero .hero1 h4{
+      /* text-align: center; */
+      width: 100%;
+   }
+  #hero .hero2{
+    padding-right: 0;
+  }
+  .hero-btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* articles */
+.aboutme,
+#educ,
+#skills,
+#exp,
+#skills,
+#projects,
+#contact {
+  padding: 8% 5% 0;
+}
+
+/* iframe */
+.certificates-container{
+  height: 70%;
+}
+
+
+  /* Contact US */
+  .contactme-btn{
+    margin-right: 0;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
