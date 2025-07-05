@@ -146,8 +146,12 @@ document.querySelectorAll(".web-card .button1").forEach((button) => {
     const alt = img.alt;
     if (pdfUrl) {
       modal.style.display = "block";
-      caption.innerHTML =
-        alt + "<br><br><small>Use Prev/Next and Ctrl+Scroll to zoom</small>";
+      if (window.innerWidth > 768) {
+        caption.innerHTML =
+          alt + "<br><br><small>Ctrl+Scroll to zoom</small>";
+      } else {
+        caption.innerHTML = alt;
+      }
       loadPDF(pdfUrl);
     }
   });
