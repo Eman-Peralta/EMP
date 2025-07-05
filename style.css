@@ -421,11 +421,14 @@ ul.custom-list li::before {
 .designs-projects-container,
 .prj-cards-container {
   display: grid;
-  gap: 20px 10px;
+  gap: 20px;
   overflow: auto;
-  padding: 20px 10px;
+  padding: 20px;
   scrollbar-color: #f03c2e #f0f0f0;
   margin-bottom: 50px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
 }
 .designs-projects-container {
   grid-template-columns: repeat(5, 1fr);
@@ -434,7 +437,6 @@ ul.custom-list li::before {
 .prj-cards-container {
   grid-template-columns: repeat(4, 1fr);
 }
-
 
 .design-card {
   position: relative;
@@ -464,7 +466,7 @@ ul.custom-list li::before {
   transition: opacity 0.3s ease;
 }
 
-.design-card img:hover {
+.design-card img:hover{
   border: 3px solid #f03c2e;
   box-shadow: #f03b2e84 0px 3px 8px;
   cursor: pointer;
@@ -480,7 +482,6 @@ ul.custom-list li::before {
 small {
   color: #fff;
 }
-
 
 /* Modal container */
 .modal {
@@ -556,22 +557,22 @@ canvas#pdfCanvas {
   font-size: 16px;
   color: #fff;
 }
-#zoomLevelspan{
+#zoomLevelspan {
   display: none;
 }
 
-#prevPage, #nextPage {
+#prevPage,
+#nextPage {
   position: fixed;
-  top: 50%;
+  bottom: 10%;
   transform: translateY(-50%);
 }
 #prevPage {
-  left: 5%;
+  left: 26%;
 }
 #nextPage {
-  right: 5%;
+  right: 26%;
 }
-
 
 /* PROJECTS - Website */
 /* From Uiverse.io by gharsh11032000 */
@@ -598,7 +599,8 @@ canvas#pdfCanvas {
 
 .prj-cards:hover {
   transform: rotate(0deg) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px #f03b2e54;
+  border:3px solid #f03c2e
 }
 
 .card__content {
@@ -608,7 +610,7 @@ canvas#pdfCanvas {
   transform: translate(-50%, -50%) scale(0);
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 60px 20px 20px;
   box-sizing: border-box;
   background-color: #000000b2;
   opacity: 0;
@@ -629,6 +631,7 @@ canvas#pdfCanvas {
   color: #f03c2e;
   font-size: 18px;
   margin-bottom: 5px;
+  /* margin-top: 60px; */
 }
 
 .card__content p {
@@ -770,21 +773,21 @@ canvas#pdfCanvas {
   #hero .hero1 {
     padding-left: 5%;
     order: 1;
-    padding: 0 5% ;
+    padding: 0 5%;
     text-align: center;
   }
   #hero-title {
-  font-size: 30px;
-}
-   #hero .hero1 h1,
-    #hero .hero1 h4{
-      /* text-align: center; */
-      width: 100%;
-   }
-  #hero .hero2{
+    font-size: 30px;
+  }
+  #hero .hero1 h1,
+  #hero .hero1 h4 {
+    /* text-align: center; */
+    width: 100%;
+  }
+  #hero .hero2 {
     padding-right: 0;
   }
-  .hero-btns{
+  .hero-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -793,24 +796,23 @@ canvas#pdfCanvas {
   }
 
   /* articles */
-.aboutme,
-#educ,
-#skills,
-#exp,
-#skills,
-#projects,
-#contact {
-  padding: 8% 5% 0;
-}
+  .aboutme,
+  #educ,
+  #skills,
+  #exp,
+  #skills,
+  #projects,
+  #contact {
+    padding: 8% 5% 0;
+  }
 
-/* iframe */
-.certificates-container{
-  height: 70%;
-}
-
+  /* iframe */
+  .certificates-container {
+    height: 70%;
+  }
 
   /* Contact US */
-  .contactme-btn{
+  .contactme-btn {
     margin-right: 0;
   }
 
