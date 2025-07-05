@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
-    <meta name="description" content="Portfolio of Emmanuel Peralta">
+    <meta name="description" content="Portfolio of Emmanuel Peralta" />
 
     <link rel="icon" href="images/resume pic.webp" type="image/x-icon" />
     <title>Emmanuel Peralta | Portfolio</title>
@@ -15,7 +15,7 @@
   <body>
     <header aria-hidden="true" tabindex="-1">
       <div class="logo" id="header">
-        <a href="#header" id="logo" aria-hidden="true">E.M.P.</a>
+        <a href="#header" id="logo" aria-hidden="true" tabindex="-1">E.M.P.</a>
       </div>
 
       <nav>
@@ -26,11 +26,19 @@
           <span></span>
         </div>
         <ul class="nav-links">
-          <li><a href="#educ"aria-hidden="true">Education</a></li>
-          <li><a href="#exp"aria-hidden="true">Work Experience</a></li>
-          <li><a href="#skills"aria-hidden="true">Skills</a></li>
-          <li><a href="#projects"aria-hidden="true">Projects</a></li>
-          <li><a href="#contact"aria-hidden="true">Contact</a></li>
+          <li>
+            <a href="#educ" aria-hidden="true" tabindex="-1">Education</a>
+          </li>
+          <li>
+            <a href="#exp" aria-hidden="true" tabindex="-1">Work Experience</a>
+          </li>
+          <li><a href="#skills" aria-hidden="true" tabindex="-1">Skills</a></li>
+          <li>
+            <a href="#projects" aria-hidden="true" tabindex="-1">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" aria-hidden="true" tabindex="-1">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -45,6 +53,7 @@
             <span class="name">I'm a </span>
             <a
               aria-hidden="true"
+              tabindex="-1"
               href=""
               class="typewrite"
               data-period="1500"
@@ -147,7 +156,13 @@
         </div>
 
         <br />
-        <button class="button1" id="certBtn" popovertarget="certificates" aria-hidden="true">
+        <button
+          class="button1"
+          id="certBtn"
+          popovertarget="certificates"
+          aria-hidden="true"
+          tabindex="-1"
+        >
           View School/Contest Certificates
         </button>
 
@@ -289,7 +304,13 @@
           </article>
         </div>
 
-        <button class="button1" id="workCertBtn" popovertarget="workCert" aria-hidden="true">
+        <button
+          class="button1"
+          id="workCertBtn"
+          popovertarget="workCert"
+          aria-hidden="true"
+          tabindex="-1"
+        >
           View Related Work Certificate
         </button>
 
@@ -506,7 +527,7 @@
                   alt="skills"
                   id="skills-img"
                 />
-                <p>Collaboration/<br>Team-Player</p>
+                <p>Collaboration/<br />Team-Player</p>
               </div>
               <div>
                 <img
@@ -824,7 +845,9 @@
                 My 2nd year college project, a library management System to help
                 the librarian to make managing of books much more efficient and
                 have clean records of borrowers. It also have activity track
-                record to check for malicious actions done within the system. Made with HTML,CSS,JS,PHP and MySQL. It also converted to Python language, with Flask.
+                record to check for malicious actions done within the system.
+                Made with HTML,CSS,JS,PHP and MySQL. It also converted to Python
+                language, with Flask.
               </p>
               <a href="#webDesDev" class="button1" class="webDesign"
                 >View Project Blueprint</a
@@ -840,7 +863,8 @@
             <div class="card__content">
               <h3 class="card__title">DMCFI Landing Page Website</h3>
               <p class="card__description">
-                My 1st year college project, made entirely with Wordpress that shows the details for the landing page of the school DMCFI.
+                My 1st year college project, made entirely with Wordpress that
+                shows the details for the landing page of the school DMCFI.
                 Responsive design to different devices screen.
               </p>
               <a
