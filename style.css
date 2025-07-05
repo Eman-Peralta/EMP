@@ -374,6 +374,7 @@ ul.custom-list li::before {
 #workCert img {
   margin-top: 10px;
   width: 50%;
+  height: auto;
   border: 1px solid #000;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -448,6 +449,7 @@ ul.custom-list li::before {
 
 .design-card img:not(.view-icon) {
   width: 100%;
+  height: auto;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   border-radius: 4px;
   transition: all 0.3s ease;
