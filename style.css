@@ -290,14 +290,14 @@ ul.custom-list li::before {
 
 /* EDUCATION - Certificated Modal */
 #certificates {
-  position: fixed; /* or absolute depending on behavior */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.15); /* see-through white */
-  backdrop-filter: blur(1px); /* optional blur for the content inside */
-  z-index: 999; /* ensures it's above rest of the page */
+  background-color: rgba(0, 0, 0, 0.25); 
+  backdrop-filter: blur(1px); 
+  z-index: 999; 
 }
 
 .certificates-container {
@@ -318,30 +318,39 @@ ul.custom-list li::before {
 .certificates-container h3 {
   margin-bottom: 20px;
 }
-.certificates-container > div {
+.certificates-container > div,
+.workCertContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px 20px;
 }
 .certificates-container img {
   width: 100%;
   height: auto;
   border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px;
 }
 #closeCertBtn {
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 24px;
-  width: 25px;
-  height: 25px;
   color: #f03c2e;
   cursor: pointer;
   background-color: transparent;
   border: none;
 }
-#closeCertBtn:hover {
-  color: #d6301c;
+#closeCertBtn:hover,
+#closeWorkCertBtn:hover {
+  color: #e30b00;
+  border-radius: 50%;
+  background-color: #3333331b;
+  padding: 3px 8px;
+}
+#closeCertBtn:hover{
+  top: 17px;
+  right: 12px;
 }
 
 /* WORK modal */
@@ -352,37 +361,41 @@ ul.custom-list li::before {
   width: 100vw;
   height: 85dvh;
   /* background-color: ; */
-  backdrop-filter: blur(1px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 100px 14vw;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(1px);
   z-index: 999;
   margin: 50px auto;
   width: 80%;
   padding: 20px;
   border-radius: 5px;
+  scrollbar-color: #f03c2e #f0f0f0;
 }
-.workCertContainer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px 20px;
+ #certHR{
+  margin-top: 50px;
+  border-color: #f03c2e;
 }
 #closeWorkCertBtn {
   position: absolute;
   right: 20px;
   top: 20px;
+  
   background-color: transparent;
   color: #f03c2e;
   border: none;
   font-size: 25px;
 }
 #closeWorkCertBtn:hover {
-  color: #e30b00;
+  right: 12px;
+  top: 17px;
 }
 .workCertContainer img {
   margin-top: 10px;
-  width: 80%;
+  width: 100%;
   height: auto;
   border: 1px solid #000;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px;
 }
 /* SKILLS */
 .cards-container {
