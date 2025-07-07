@@ -359,6 +359,11 @@ ul.custom-list li::before {
   padding: 20px;
   border-radius: 5px;
 }
+.workCertContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+}
 #closeWorkCertBtn {
   position: absolute;
   right: 20px;
@@ -371,9 +376,9 @@ ul.custom-list li::before {
 #closeWorkCertBtn:hover {
   color: #e30b00;
 }
-#workCert img {
+.workCertContainer img {
   margin-top: 10px;
-  width: 50%;
+  width: 80%;
   height: auto;
   border: 1px solid #000;
   border-radius: 5px;
