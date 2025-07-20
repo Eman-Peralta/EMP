@@ -105,7 +105,7 @@ header nav ul li:hover a {
   height: 73%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
 }
 #hero-title {
   font-size: 35px;
@@ -117,7 +117,7 @@ header nav ul li:hover a {
   justify-content: center;
   align-items: start;
   margin: 7% 0;
-  padding-left: 30%;
+  padding-left: 23%;
 }
 #hero .hero2 {
   display: flex;
@@ -231,7 +231,7 @@ header nav ul li:hover a {
 #skills,
 #projects,
 #contact {
-  padding: 8% 14% 0;
+  padding: 8% 12% 0;
 }
 .aboutme h1,
 #educ h1,
