@@ -498,7 +498,7 @@ ul.custom-list li::before {
 }
 
 /* Show icon when image is hovered */
-.design-card > img:hover .view-icon {
+.design-card img:hover + .view-icon {
   opacity: 1;
 }
 
