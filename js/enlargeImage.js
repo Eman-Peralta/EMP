@@ -131,7 +131,7 @@ document.querySelectorAll(".designs-projects-container img").forEach((img) => {
     if (pdfUrl) {
       modal.style.display = "block";
       caption.innerHTML =
-        "<strong>" + alt + "</strong><br><br><small>Use Prev/Next and Ctrl+Scroll to zoom</small>";
+        "<strong>" + alt + "</strong><br><br><small>Ctrl + Scroll to zoom</small>";
       loadPDF(pdfUrl);
     }
   });
