@@ -22,7 +22,7 @@ header .logo {
   margin-left: 2%;
 }
 header .logo a {
-  font-size: 40px;
+  font-size: clamp(40px, 4vw, 48px);
   font-weight: bold;
   color: #f03c2e;
   font-family: sans;
@@ -34,7 +34,7 @@ header nav ul li {
   display: inline-block;
   margin: 0 15px;
   padding: 5px 8px;
-  font-size: 18px;
+  font-size: clamp(18px, 4vw, 26px);
   position: relative;
   overflow: hidden;
 }
@@ -82,7 +82,7 @@ header nav ul li:hover a {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: clamp(20px, 4vw, 24px);
   cursor: pointer;
   box-shadow: 0 0 10px rgba(240, 60, 46, 0.5);
   opacity: 0;
@@ -108,7 +108,7 @@ header nav ul li:hover a {
   grid-template-columns: 1.2fr 1fr;
 }
 #hero-title {
-  font-size: 35px;
+  font-size: clamp(35px, 4vw, 43px);
 }
 
 #hero .hero1 {
@@ -184,7 +184,7 @@ header nav ul li:hover a {
   background: linear-gradient(45deg, #e30b00, #ff7f50);
   color: #fff;
   padding: 12px 22px;
-  font-size: 16px;
+  font-size: clamp(16px, 4vw, 24px);
   transition: all 0.24s ease-in-out;
   border-radius: 35px;
   border: none;
@@ -219,7 +219,7 @@ header nav ul li:hover a {
 }
 
 #name {
-  font-size: 18px;
+  font-size: clamp(18px, 4vw, 26px);
   color: #d63226;
 }
 
@@ -240,7 +240,7 @@ header nav ul li:hover a {
 #skills h1,
 #projects h1,
 #contact h1 {
-  font-size: 28px;
+  font-size: clamp(28px, 4vw, 36px);
 }
 .aboutme p {
   margin-top: 20px;
@@ -336,7 +336,7 @@ ul.custom-list li::before {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 24px;
+  font-size: clamp(24px, 4vw, 32px);
   color: #f03c2e;
   cursor: pointer;
   background-color: transparent;
@@ -384,7 +384,7 @@ ul.custom-list li::before {
   background-color: transparent;
   color: #f03c2e;
   border: none;
-  font-size: 25px;
+  font-size: clamp(25px, 4vw, 33px);
 }
 #closeWorkCertBtn:hover {
   right: 12px;
@@ -528,7 +528,7 @@ small {
   top: 20px;
   right: 40px;
   color: white;
-  font-size: 35px;
+  font-size: clamp(35px, 4vw, 43px);
   font-weight: bold;
   cursor: pointer;
 }
@@ -549,7 +549,7 @@ canvas#pdfCanvas {
 #caption strong {
   color: white;
   padding: 10px 0 20px;
-  font-size: 16px;
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 /* Pagination + Zoom Controls */
@@ -577,7 +577,7 @@ canvas#pdfCanvas {
 }
 
 #pdfPaginationControls span {
-  font-size: 16px;
+  font-size: clamp(16px, 4vw, 24px);
   color: #fff;
 }
 #zoomLevelspan {
@@ -653,14 +653,14 @@ canvas#pdfCanvas {
 }
 .card__content h3 {
   color: #f03c2e;
-  font-size: 18px;
+  font-size: clamp(18px, 4vw, 26px);
   margin-bottom: 5px;
   /* margin-top: 60px; */
 }
 
 .card__content p {
   color: #fff;
-  font-size: 14px;
+  font-size: clamp(14px, 4vw, 22px);
   margin-bottom: 10px;
 }
 
@@ -801,7 +801,7 @@ canvas#pdfCanvas {
     text-align: center;
   }
   #hero-title {
-    font-size: 30px;
+    font-size: clamp(30px, 4vw, 38px);
   }
   #hero .hero1 h1,
   #hero .hero1 h4 {
