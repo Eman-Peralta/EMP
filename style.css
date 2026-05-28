@@ -34,7 +34,7 @@ header nav ul li {
   display: inline-block;
   margin: 0 15px;
   padding: 5px 8px;
-  font-size: clamp(18px, 4vw, 26px);
+  font-size: clamp(14px, 4vw, 22px);
   position: relative;
   overflow: hidden;
 }
@@ -182,12 +182,14 @@ header nav ul li:hover a {
 .contactme-btn,
 .button1 {
   background: linear-gradient(45deg, #e30b00, #ff7f50);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
   color: #fff;
   padding: 12px 22px;
-  font-size: clamp(16px, 4vw, 24px);
-  transition: all 0.24s ease-in-out;
+  font-size: clamp(10px, 4vw, 16px);
   border-radius: 35px;
   border: none;
+  transition: background-position 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .contactme-btn {
   margin-right: 20px;
@@ -195,7 +197,7 @@ header nav ul li:hover a {
 
 .contactme-btn:hover,
 .button1:hover {
-  background: linear-gradient(45deg, #ff7f50, #e30b00);
+  background-position: 100% 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -207,7 +209,7 @@ header nav ul li:hover a {
   transition: border-radius 0.24s ease-in-out, box-shadow 0.24s ease-in-out;
 }
 .resume-btn:hover {
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #icons {
@@ -295,9 +297,10 @@ ul.custom-list li::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.25); 
-  backdrop-filter: blur(1px); 
-  z-index: 999; 
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  z-index: 999;
 }
 
 .certificates-container {
@@ -409,12 +412,16 @@ ul.custom-list li::before {
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
-  transition: outline 0.3s ease;
+  transition: outline 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 .cards:hover,
 .workCertContainer img:hover {
   outline: 2px solid #f03c2e;
   box-shadow: #f03b2e76 0px 3px 8px;
+}
+
+.cards:hover h3{
+  color: #f03c2e;
 }
 
 .card-images {
@@ -653,14 +660,14 @@ canvas#pdfCanvas {
 }
 .card__content h3 {
   color: #f03c2e;
-  font-size: clamp(18px, 4vw, 26px);
+  font-size: clamp(12px, 4vw, 18px);
   margin-bottom: 5px;
   /* margin-top: 60px; */
 }
 
 .card__content p {
   color: #fff;
-  font-size: clamp(14px, 4vw, 22px);
+  font-size: clamp(10px, 4vw, 16px);
   margin-bottom: 10px;
 }
 
